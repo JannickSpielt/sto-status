@@ -134,7 +134,7 @@
   .services .sdot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--offline); }
   .services .ok .sdot { background: var(--online); }
   .services .name { flex: 1; }
-  .services .val { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .services .val { white-space: nowrap; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .note { font-size: 13px; color: var(--muted); margin: 14px 4px 0; }
   .note a { color: var(--accent); }
 
@@ -334,7 +334,7 @@
       const rank = { offline: 3, degraded: 2, unknown: 1, online: 0 };
       if (cells[i] === null || rank[x.s] > rank[cells[i]]) cells[i] = x.s;
     }
-    $("services").innerHTML = (status.services || []).map((x) => `<li class="${x.ok ? "ok" : ""}"><span class="sdot"></span><span class="name">${esc(x.name)}</span><span class="val">${x.ok ? `erreichbar · ${x.ms} Millisekunden` : "keine Antwort"}</span></li>`).join("");
+    $("services").innerHTML = (status.services || []).map((x) => `<li class="${x.ok ? "ok" : ""}"><span class="sdot"></span><span class="name">${esc(x.name)}</span><span class="val">${x.ok ? `${x.ms} Millisekunden` : "keine Antwort"}</span></li>`).join("");
     $("bars").innerHTML = cells.map((c) => `<i class="${c || ""}" title="${c || "keine Daten"}"></i>`).join("");
 
     if (!stale && lastState && lastState !== state) toast(`Server jetzt: ${STATES[state].label}`);
