@@ -1,0 +1,127 @@
+{
+ "dns": {
+  "launcher.startrekonline.com": [
+   "208.95.184.201"
+  ],
+  "patchserver.crypticstudios.com": [
+   "208.95.184.199"
+  ],
+  "accounts.crypticstudios.com": [
+   "208.95.184.162"
+  ],
+  "accountserver.crypticstudios.com": "ENOTFOUND",
+  "controllertracker.crypticstudios.com": [
+   "208.95.186.113"
+  ],
+  "controllertracker0.crypticstudios.com": [
+   "208.95.186.141"
+  ],
+  "controllertracker1.crypticstudios.com": [
+   "208.95.186.113"
+  ],
+  "errortracker.crypticstudios.com": [
+   "216.115.181.80"
+  ],
+  "login.startrekonline.com": "ENOTFOUND",
+  "auth.crypticstudios.com": "ENOTFOUND",
+  "www.playstartrekonline.com": [
+   "23.209.84.8",
+   "23.209.84.58"
+  ],
+  "www.arcgames.com": [
+   "23.209.84.24",
+   "23.209.84.50"
+  ],
+  "api.arcgames.com": [
+   "23.209.84.56",
+   "23.209.84.63"
+  ]
+ },
+ "open": {
+  "launcher.startrekonline.com": [
+   80,
+   443
+  ],
+  "patchserver.crypticstudios.com": [],
+  "accounts.crypticstudios.com": [
+   7004
+  ],
+  "controllertracker.crypticstudios.com": [
+   7399
+  ],
+  "controllertracker0.crypticstudios.com": [
+   7399
+  ],
+  "controllertracker1.crypticstudios.com": [
+   7399
+  ],
+  "errortracker.crypticstudios.com": [
+   7224
+  ],
+  "www.playstartrekonline.com": [
+   80,
+   443
+  ],
+  "www.arcgames.com": [
+   80,
+   443
+  ],
+  "api.arcgames.com": [
+   80,
+   443
+  ]
+ },
+ "http": {
+  "http://launcher.startrekonline.com/": {
+   "status": 403,
+   "loc": null,
+   "type": "text/html",
+   "body": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\"><html><head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n\t\t<title>Apache HTTP Server Test Page powered by CentOS</title>\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n\n    <!-- Bootstrap -->\n    <link href=\"/noindex/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <link rel=\"stylesheet\" href=\"noindex/css/open-sans.css\" type=\"text/css\" />\n\n<style type=\"text/css\"><!--\t\t \n\nbody {\n  font-family: \"Open Sans\", Helvetica, sans-serif;\n  font-weight: 100;\n  color:"
+  },
+  "https://launcher.startrekonline.com/": "CERT_HAS_EXPIRED",
+  "http://launcher.startrekonline.com/launcher_server_status": {
+   "status": 404,
+   "loc": null,
+   "type": "text/html; charset=iso-8859-1",
+   "body": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /launcher_server_status was not found on this server.</p>\n</body></html>\n"
+  },
+  "https://launcher.startrekonline.com/launcher_server_status": "CERT_HAS_EXPIRED",
+  "http://launcher.startrekonline.com/launcher_server_status_json": {
+   "status": 404,
+   "loc": null,
+   "type": "text/html; charset=iso-8859-1",
+   "body": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /launcher_server_status_json was not found on this server.</p>\n</body></html>\n"
+  },
+  "http://launcher.startrekonline.com/static/st/launcher_server_status": {
+   "status": 404,
+   "loc": null,
+   "type": "text/html; charset=iso-8859-1",
+   "body": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /static/st/launcher_server_status was not found on this server.</p>\n</body></html>\n"
+  },
+  "https://api.arcgames.com/v1.0/games/sto/status": {
+   "status": 404,
+   "loc": null,
+   "type": "application/json",
+   "body": "{\"error\":\"not_found\",\"error_description\":\"Not Found\"}"
+  },
+  "https://api.arcgames.com/v1.0/games/sto/server_status": {
+   "status": 404,
+   "loc": null,
+   "type": "application/json",
+   "body": "{\"error\":\"not_found\",\"error_description\":\"Not Found\"}"
+  },
+  "https://api.arcgames.com/v1.0/games/sto": {
+   "status": 200,
+   "loc": null,
+   "type": "application/json; charset=utf-8",
+   "body": "{\"id\":\"sto\",\"name\":\"Star Trek Online\"}"
+  },
+  "http://patchserver.crypticstudios.com/": "ECONNREFUSED"
+ },
+ "news": {
+  "status": 200,
+  "type": "application/json; charset=utf-8",
+  "cors": null,
+  "body": "{\"more_news\":true,\"news\":[{\"id\":\"11583800\",\"title\":\"The Dominion War Starship Bundle!\",\"language\":{\"id\":\"en\"},\"summary\":\"The Dominion War Starship Bundle is coming to PC next week, with three ships, five visual variants, and three exclusive items! Find out more here.\",\"images\":{\"img_microsite_thumbnail\":{\"label\":\"img_microsite_thumbnail\",\"url\":\"https:\\/\\/pwimages-a.akamaihd.net\\/arc\\/42\\/39\\/4239dddf12c45fdae2f81e1c7de49fd21793922345.png\"}},\"tags\":[\"star-trek-online\",\"sto-news\",\"sto-launcher\"],\"master_id\":\"1184\",\"translations\":[{\"master_id\":\"1184\",\"id\":\"11583800\",\"language\":\"en\",\"game_abbrs\":\",sto,\"},{\"master_id\":\"1184\",\"id\":\"11583836\",\"language\":\"de\",\"game_abbrs\":\",sto,\"}]},{\"id\":\"11583782\",\"title\":\"Bonus Marks Event!\",\"language\":{\"id\":\"en\"},\"summary\":\"Captains on PC can earn bonus Marks for a limited time!\",\"images\":{\"img_microsite_thumbnail\":{\"label\":\"img_microsite_thumbnail\",\"url\":\"https:\\/\\/pwimages-a.akamaihd.net\\/arc\\/91\\/52\\/91526c1a0b2d2a4d998cb4fb620f2a4c1793706653.jpg\"}},\"tags\":[\"star-trek-online\",\"sto-news\",\"sto-launcher\"],\"master_id\":\"1172\",\"translations\":[{\"master_id\":\"1172\",\"id\":\"11583779\",\"language\":\"de\",\"game_abbrs\":\",sto,\"},{\"master_id\":\"1172\",\"id\":\"11583782\",\"language\":\"en\",\"game_abbrs\":\",sto,\"}]}]}"
+ }
+}
