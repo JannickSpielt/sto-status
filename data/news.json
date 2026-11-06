@@ -1,4 +1,405 @@
 {
- "updatedAt": "2026-11-06T16:35:59.632Z",
- "items": []
+ "updatedAt": "2026-11-06T16:39:23.475Z",
+ "items": [
+  {
+   "id": "11583800",
+   "title": "The Dominion War Starship Bundle!",
+   "summary": "The Dominion War Starship Bundle is coming to PC next week, with three ships, five visual variants, and three exclusive items! Find out more here.",
+   "image": "https://pwimages-a.akamaihd.net/arc/42/39/4239dddf12c45fdae2f81e1c7de49fd21793922345.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583800",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583836",
+   "firstSeen": null
+  },
+  {
+   "id": "11583782",
+   "title": "Bonus Marks Event!",
+   "summary": "Captains on PC can earn bonus Marks for a limited time!",
+   "image": "https://pwimages-a.akamaihd.net/arc/91/52/91526c1a0b2d2a4d998cb4fb620f2a4c1793706653.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583782",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583779",
+   "firstSeen": null
+  },
+  {
+   "id": "11583776",
+   "title": "The Rediscovered Event!",
+   "summary": "Participate in the Rediscovered Event on Xbox and Playstation and unlock special Anti-Gorn Space Weapons!",
+   "image": "https://pwimages-a.akamaihd.net/arc/f8/7f/f87f6bc53cf54cd2707f3a2d82fb9cac1793702291.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583776",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583773",
+   "firstSeen": null
+  },
+  {
+   "id": "11583764",
+   "title": "Rediscovered Giveaways!",
+   "summary": "New giveaways are coming every day in the leadup to Rediscovered launching on Console!",
+   "image": "https://pwimages-a.akamaihd.net/arc/ba/67/ba678b0f6cb3765d8a287ef01851112f1793660257.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583764",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583761",
+   "firstSeen": null
+  },
+  {
+   "id": "11583770",
+   "title": "Start a New Adventure or Switch Things Up!",
+   "summary": "Captains on Xbox and Playstation can save 25% on everything they need to start their adventure and 20% on the Captain Alteration Token!",
+   "image": "https://pwimages-a.akamaihd.net/arc/eb/b3/ebb3ad083b8fc6e03f5ad704715f85cb1793631243.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583770",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583767",
+   "firstSeen": null
+  },
+  {
+   "id": "11583722",
+   "title": "A Tribute to Absent Friends",
+   "summary": "A special message from Executive Producer Thomas Marrone.",
+   "image": "https://pwimages-a.akamaihd.net/arc/9d/d3/9dd3583dcd753da6cab20b80b737926f1793319939.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583722",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583725",
+   "firstSeen": null
+  },
+  {
+   "id": "11583713",
+   "title": "Bonus Dilithium Event",
+   "summary": "Captains on all platforms can get bonus Dilithium throughout the game, save 20% on Ships in the Dilithium Store, and grab Vanity Shields for Dilithium!",
+   "image": "https://pwimages-a.akamaihd.net/arc/cf/a6/cfa6bfd720fc4762f4e07d37d77d5b6f1793267835.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583713",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583716",
+   "firstSeen": null
+  },
+  {
+   "id": "11583692",
+   "title": "Patch Notes for 10/28/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/77/09/7709d8fee8be8309e42994630a6cddfe1793178987.jpg",
+   "kind": "Patch-Notes",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583692",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583695",
+   "firstSeen": null
+  },
+  {
+   "id": "11583683",
+   "title": "20% Ship Sale",
+   "summary": "For a limited time on Xbox and PlayStation, save 20% on all Zen Store ships!",
+   "image": "https://pwimages-a.akamaihd.net/arc/d9/ef/d9efa681a0a45c1562354c2b6a8c13f41783326268.jpg",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583683",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583686",
+   "firstSeen": null
+  },
+  {
+   "id": "11583650",
+   "title": "Mudd Has a Gamma Front!",
+   "summary": "The ships of the Hur'q, Cardassians, and Jem'Hadar could be yours in the newest Mudd Bundle on PC!",
+   "image": "https://pwimages-a.akamaihd.net/arc/51/39/5139c5b24c3191c26db1a05e511aeb351792796688.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583650",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583653",
+   "firstSeen": null
+  },
+  {
+   "id": "11583629",
+   "title": "New Ships at Your Fleet Starbase!",
+   "summary": "Two new types of ships are available in your Federation Starbases. Learn more here!",
+   "image": "https://pwimages-a.akamaihd.net/arc/3e/78/3e781bb0a657f8f5faf94f4717bdd5761789519350.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583629",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583632",
+   "firstSeen": null
+  },
+  {
+   "id": "11583605",
+   "title": "Halloween Giveaways!",
+   "summary": "The same Halloween Giveaways from PC are coming to Xbox and Playstation!",
+   "image": "https://pwimages-a.akamaihd.net/arc/8d/99/8d99b5a1aeb07c269d61c3e9a4057bb41792013377.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583605",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583608",
+   "firstSeen": null
+  },
+  {
+   "id": "11583617",
+   "title": "Key and Lobi Store Sale!",
+   "summary": "Save 15% on Keys and get 20% off in the Lobi Store on all platforms!",
+   "image": "https://pwimages-a.akamaihd.net/arc/6f/7e/6f7efe60a2aa3c016bb17c3a848c14c81782745870.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583617",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583620",
+   "firstSeen": null
+  },
+  {
+   "id": "11583623",
+   "title": "Patch Notes for 10/22/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/b4/03/b40376f5eb94b4333905358ad651880a1792670837.jpg",
+   "kind": "Patch-Notes",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583623",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583626",
+   "firstSeen": null
+  },
+  {
+   "id": "11583611",
+   "title": "The Fantastic Voyage Bundle!",
+   "summary": "The Fantastic Voyage Bundle celebrates some of Voyager's greatest encounters, on all platforms!",
+   "image": "https://pwimages-a.akamaihd.net/arc/92/fa/92fac5999bd903f685b5766abaf2cbc51792630594.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583611",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583614",
+   "firstSeen": null
+  },
+  {
+   "id": "11583593",
+   "title": "New Graphics Features Coming to PC!",
+   "summary": "We’re trying some new graphics features on PC starting October 22nd. Here’s a preview of what you might see, and how to turn it on!",
+   "image": "https://pwimages-a.akamaihd.net/arc/0f/b3/0fb3296bffb45c9af1d96ac7410e421f1792555985.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583593",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583596",
+   "firstSeen": null
+  },
+  {
+   "id": "11583548",
+   "title": "Endeavor Bonus Week",
+   "summary": "Earn 60% more Endeavour XP this week on Xbox and Playstation!",
+   "image": "https://pwimages-a.akamaihd.net/arc/42/d2/42d2e5d0d95479bbbf36b9293a6f5ab91788776558.jpg",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583548",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583551",
+   "firstSeen": null
+  },
+  {
+   "id": "11583530",
+   "title": "Admiralty Bonus Event!",
+   "summary": "Captains on PC can earn bonuses to their Admiralty Projects for a week!",
+   "image": "https://pwimages-a.akamaihd.net/arc/92/7d/927d38f1a30551034faaba60ddd9ea8f1787574061.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583530",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583533",
+   "firstSeen": null
+  },
+  {
+   "id": "11583512",
+   "title": "PC Icon Flash Sale, Console Infinity Flash Sale!",
+   "summary": "Get brand new bundles of the Starship Icons pack on PC, and save 30% on R&D and Duty Officer Packs on Console!",
+   "image": "https://pwimages-a.akamaihd.net/arc/08/93/08936c794c41c4b9220f6c333464d4321792191381.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583512",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583509",
+   "firstSeen": null
+  },
+  {
+   "id": "11583488",
+   "title": "What Do You Have to Fear?",
+   "summary": "The Fall of the Old Ones returns, and a certain Entertainer who once battle wits with Janeway comes with it!",
+   "image": "https://pwimages-a.akamaihd.net/arc/3b/96/3b96c2241e42e1193d2861709c63b4d01792010683.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583488",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583491",
+   "firstSeen": null
+  },
+  {
+   "id": "11583521",
+   "title": "The Galaxy Goes to Red Alert",
+   "summary": "Captains on PC can go to Red Alert for one week to earn an Ultimate Tech Upgrade!",
+   "image": "https://pwimages-a.akamaihd.net/arc/9e/b6/9eb620530c2cc30313a92a59072579d11789395249.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583521",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583524",
+   "firstSeen": null
+  },
+  {
+   "id": "11583494",
+   "title": "Halloween Giveaways!",
+   "summary": "We're doing Giveaways leading up to the Halloween Event on PC! (And after on Console)",
+   "image": "https://pwimages-a.akamaihd.net/arc/8d/99/8d99b5a1aeb07c269d61c3e9a4057bb41792013377.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583494",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583497",
+   "firstSeen": null
+  },
+  {
+   "id": "11583431",
+   "title": "Double XP Event!",
+   "summary": "Captains on Xbox and Playstation can enjoy double experience this weekend!",
+   "image": "https://pwimages-a.akamaihd.net/arc/8c/cc/8ccc859fb1ad1a147e761ff76b3aafa31714382644.jpg",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583431",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583434",
+   "firstSeen": null
+  },
+  {
+   "id": "11583479",
+   "title": "Command the Vidiian Warship!",
+   "summary": "Command the Vidiian Science Warship, and steal life from your foes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/84/f9/84f9ca415cbbf203b1af750b63d8828d1791935041.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583479",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583482",
+   "firstSeen": null
+  },
+  {
+   "id": "11583425",
+   "title": "A New Feature on Tribble!",
+   "summary": "A brand new feature for Deep Space Encounters is on Tribble starting today, and we want your feedback!",
+   "image": "https://pwimages-a.akamaihd.net/arc/a3/71/a37133f78984ca515391846f327334771791501250.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583425",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583428",
+   "firstSeen": null
+  },
+  {
+   "id": "11583419",
+   "title": "Save on Bundles!",
+   "summary": "Save 35% on Ship Bundles in on Ship Bundles and Expansion Bundles on Xbox and Playstation!",
+   "image": "https://pwimages-a.akamaihd.net/arc/6a/13/6a135515fca42b18e62de3dc046fd7cf1790327536.jpg",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583419",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583422",
+   "firstSeen": null
+  },
+  {
+   "id": "11583344",
+   "title": "Four Bundles Return!",
+   "summary": "The Return to Duty Pack, the Undiscovered Mini-Bundle, the Herald Bundle, and the Frontier Day Mini Bundle are back on PC for a limited time!",
+   "image": "https://pwimages-a.akamaihd.net/arc/f2/09/f2092e41406f4a938485d6b236ec70d21791235751.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583344",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583347",
+   "firstSeen": null
+  },
+  {
+   "id": "11583305",
+   "title": "Upgrade Event!",
+   "summary": "Captains on all platforms can get double the upgrade points for a limited time, starting tomorrow!",
+   "image": "https://pwimages-a.akamaihd.net/arc/33/f3/33f36a25fb0a05253f2e3ca21e2aae181715364729.jpg",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583305",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583308",
+   "firstSeen": null
+  },
+  {
+   "id": "11583392",
+   "title": "PC Patch Notes for 10/8/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online on PC in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/dd/5b/dd5be9621a388d8a195d6002dbca49181791452142.jpg",
+   "kind": "Patch-Notes",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583392",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583395",
+   "firstSeen": null
+  },
+  {
+   "id": "11583320",
+   "title": "Save 25% on Keys!",
+   "summary": "Save 25% on Keys and the Keyring Bundle over the next 48 hours on PC!",
+   "image": "https://pwimages-a.akamaihd.net/arc/6b/45/6b45e01fe848f27df21ff03bc72fd8d31790929528.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583320",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583317",
+   "firstSeen": null
+  },
+  {
+   "id": "11583299",
+   "title": "Double XP Event",
+   "summary": "Captains on PC can enjoy double experience this weekend!",
+   "image": "https://pwimages-a.akamaihd.net/arc/8c/cc/8ccc859fb1ad1a147e761ff76b3aafa31714382644.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583299",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583302",
+   "firstSeen": null
+  },
+  {
+   "id": "11583242",
+   "title": "Mudd's Chosen Sale, and Key & Lobi Sale!",
+   "summary": "On Xbox and PlayStation, save on Keys, the Keyring Bundle, Lobi items, and whatever the Iconians are making Mudd sell!",
+   "image": "https://pwimages-a.akamaihd.net/arc/7d/05/7d05ce1f1c7a9a8ed63557cefe34af651790631937.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583242",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583245",
+   "firstSeen": null
+  },
+  {
+   "id": "11583251",
+   "title": "Patch Notes for 9/29/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/24/26/2426a463e06ebc60ffdfb275411bb44d1790686321.jpg",
+   "kind": "Patch-Notes",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583251",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583254",
+   "firstSeen": null
+  },
+  {
+   "id": "11583236",
+   "title": "Command the Breen Erigah Frigate!",
+   "summary": "Straight from Star Trek: Discovery, the Erigah Pilot Frigate is coming to the Infinity Lock Box on Xbox and Playstation!",
+   "image": "https://pwimages-a.akamaihd.net/arc/44/57/44577e5de336506f030abbb04df044571790376174.png",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583236",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583239",
+   "firstSeen": null
+  },
+  {
+   "id": "11583233",
+   "title": "Save on Bundles!",
+   "summary": "Captains on PC can save on Bundles for a limited time!",
+   "image": "https://pwimages-a.akamaihd.net/arc/6a/13/6a135515fca42b18e62de3dc046fd7cf1790327536.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583233",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583230",
+   "firstSeen": null
+  },
+  {
+   "id": "11583227",
+   "title": "The Timeline Needs You!",
+   "summary": "Starting September 29th on Xbox and Playstation, you'll be able to create a Temporal Recruit and unlock rewards for your whole account!",
+   "image": "https://pwimages-a.akamaihd.net/arc/85/bf/85bf582d2f46c900cd0d7e2292c34d111790326486.jpg",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583227",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583224",
+   "firstSeen": null
+  },
+  {
+   "id": "11583215",
+   "title": "The Herald Mini Bundle!",
+   "summary": "The Herald Bundle is coming to Star Trek Online on Console next week, allowing you to get almost the entire Herald Lockbox in one go!",
+   "image": "https://pwimages-a.akamaihd.net/arc/b5/a6/b5a6f2e8ef2159751b4382eceabe92901790298636.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583215",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583218",
+   "firstSeen": null
+  },
+  {
+   "id": "11583203",
+   "title": "Send the Demons Back!",
+   "summary": "The Demon Hunting Event returns on Xbox and Playstation as the fourth in our 2026 Event Campaign!",
+   "image": "https://pwimages-a.akamaihd.net/arc/59/a7/59a75f25a3b6742e7677057a977591a81790211080.png",
+   "kind": "Konsole",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583203",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583206",
+   "firstSeen": null
+  },
+  {
+   "id": "11583134",
+   "title": "Bonus Marks Event",
+   "summary": "Captains on all platforms can earn bonus Marks for a limited time!",
+   "image": "https://pwimages-a.akamaihd.net/arc/bd/e9/bde9323be932567b20bf5f35bb1ff4ee1789996823.jpg",
+   "kind": "News",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583134",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583137",
+   "firstSeen": null
+  },
+  {
+   "id": "11583209",
+   "title": "PC Patch Notes for 9/24/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online on PC in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/a4/55/a455dd42e45d37e93a383c8d889252aa1790250427.jpg",
+   "kind": "Patch-Notes",
+   "url": "https://www.playstartrekonline.com/en/news/article/11583209",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583212",
+   "firstSeen": null
+  }
+ ]
 }

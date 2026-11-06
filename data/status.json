@@ -1,15 +1,54 @@
 {
- "state": "offline",
- "value": "HTTP 404",
+ "state": "online",
  "message": "",
- "raw": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /launcher_server_status was not found on this server.</p>\n</body></html>\n",
- "latencyMs": 238,
- "checkedAt": "2026-11-06T16:35:59.632Z",
- "since": "2026-11-06T16:35:59.632Z",
+ "services": [
+  {
+   "id": "account",
+   "name": "Account-Server",
+   "core": true,
+   "ok": true,
+   "ms": 123
+  },
+  {
+   "id": "game",
+   "name": "Spielserver (Controller)",
+   "core": true,
+   "ok": true,
+   "ms": 124
+  },
+  {
+   "id": "launcher",
+   "name": "Launcher",
+   "core": false,
+   "ok": true,
+   "ms": 368
+  },
+  {
+   "id": "web",
+   "name": "Offizielle Website",
+   "core": false,
+   "ok": true,
+   "ms": 707
+  },
+  {
+   "id": "error",
+   "name": "Fehlerdienst",
+   "core": false,
+   "ok": true,
+   "ms": 226
+  }
+ ],
+ "latencyMs": 124,
+ "checkedAt": "2026-11-06T16:39:23.475Z",
+ "since": "2026-11-06T16:39:23.475Z",
  "history": [
   {
    "t": "2026-11-06T16:35:59.632Z",
    "s": "offline"
+  },
+  {
+   "t": "2026-11-06T16:39:23.475Z",
+   "s": "online"
   }
  ]
 }
