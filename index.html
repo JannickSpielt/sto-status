@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>STO Status</title>
+<meta name="description" content="Live-Serverstatus und News zu Star Trek Online">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05070d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="STO Status">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<style>
+  :root {
+    --bg: #05070d;
+    --panel: rgba(255,255,255,0.045);
+    --panel-border: rgba(255,255,255,0.08);
+    --text: #eef2ff;
+    --muted: #8b93ad;
+    --accent: #ffb347;
+    --online: #3ddc97;
+    --maint: #ffb347;
+    --offline: #ff5c6c;
+    --unknown: #8b93ad;
+    --state: var(--unknown);
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --radius: 22px;
+    --top: env(safe-area-inset-top, 0px);
+    --bottom: env(safe-area-inset-bottom, 0px);
+  }
+  [data-state="online"] { --state: var(--online); }
+  [data-state="maintenance"] { --state: var(--maint); }
+  [data-state="offline"] { --state: var(--offline); }
+
+  * { box-sizing: border-box; }
+  html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; background: var(--bg); }
+  html, body { margin: 0; overscroll-behavior: none; }
+  body {
+    min-height: 100dvh;
+    color: var(--text);
+    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    background:
+      radial-gradient(1px 1px at 12% 18%, #fff8 50%, transparent 51%),
+      radial-gradient(1px 1px at 72% 9%, #fff6 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 85% 42%, #fff7 50%, transparent 51%),
+      radial-gradient(1px 1px at 33% 61%, #fff5 50%, transparent 51%),
+      radial-gradient(1px 1px at 58% 78%, #fff6 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 8% 88%, #fff5 50%, transparent 51%),
+      radial-gradient(1px 1px at 92% 92%, #fff4 50%, transparent 51%),
+      radial-gradient(120% 70% at 50% -10%, #1a2550 0%, transparent 60%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+
+  .app { max-width: 560px; margin: 0 auto; padding: calc(var(--top) + 16px) 18px calc(var(--bottom) + 104px); }
+
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand svg { width: 28px; height: 28px; }
+  h1 { font-size: 20px; letter-spacing: 0.02em; margin: 0; font-weight: 700; }
+  .eyebrow { font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .icon-btn {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--panel); border: 1px solid var(--panel-border); color: var(--text);
+    touch-action: manipulation; -webkit-user-select: none; user-select: none; cursor: pointer;
+    transition: transform 140ms var(--ease-out), background 140ms var(--ease-out);
+  }
+  .icon-btn:active { transform: scale(0.94); background: rgba(255,255,255,0.09); }
+  .icon-btn svg { width: 18px; height: 18px; }
+  .icon-btn.spinning svg { animation: spin 700ms var(--ease-out); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .view { display: none; }
+  .view.active { display: block; animation: enter 260ms var(--ease-out); }
+  @keyframes enter { from { opacity: 0; transform: translateY(8px); } }
+
+  /* Status-Karte */
+  .hero {
+    position: relative; overflow: hidden;
+    border-radius: 28px; padding: 30px 22px 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border: 1px solid var(--panel-border);
+    text-align: center;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: -40% -20% auto; height: 260px;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--state) 28%, transparent), transparent);
+    transition: background 400ms var(--ease-out); pointer-events: none;
+  }
+  .orb { position: relative; width: 132px; height: 132px; margin: 4px auto 18px; }
+  .orb .core {
+    position: absolute; inset: 34px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--state) 55%, white), var(--state) 60%);
+    box-shadow: 0 0 40px color-mix(in srgb, var(--state) 70%, transparent);
+    transition: background 400ms var(--ease-out), box-shadow 400ms var(--ease-out);
+  }
+  .orb .ring {
+    position: absolute; inset: 0; border-radius: 50%;
+    border: 2px solid var(--state); opacity: 0;
+    animation: pulse 2.6s var(--ease-out) infinite;
+  }
+  .orb .ring:nth-child(2) { animation-delay: 1.3s; }
+  @keyframes pulse { 0% { transform: scale(0.45); opacity: 0.8; } 100% { transform: scale(1); opacity: 0; } }
+  [data-state="unknown"] .orb .ring { animation: none; }
+
+  .state-label { position: relative; font-size: 34px; font-weight: 800; letter-spacing: -0.01em; margin: 0; }
+  .state-sub { position: relative; color: var(--muted); margin: 6px 0 0; font-size: 15px; }
+  .state-msg { position: relative; margin: 14px auto 0; max-width: 40ch; font-size: 14px; color: var(--text); opacity: 0.85; }
+  .state-msg:empty { display: none; }
+
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+  .fact { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 18px; padding: 12px; }
+  .fact b { display: block; font-size: 17px; font-variant-numeric: tabular-nums; }
+  .fact span { font-size: 12px; color: var(--muted); }
+
+  .card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); padding: 16px; margin-top: 14px; }
+  .card h2 { font-size: 14px; margin: 0 0 12px; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .bars { display: flex; gap: 2px; height: 34px; align-items: stretch; }
+  .bars i { flex: 1; border-radius: 3px; background: var(--unknown); opacity: 0.35; }
+  .bars i.online { background: var(--online); opacity: 1; }
+  .bars i.maintenance { background: var(--maint); opacity: 1; }
+  .bars i.offline { background: var(--offline); opacity: 1; }
+  .bars-legend { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+  .note { font-size: 13px; color: var(--muted); margin: 14px 4px 0; }
+  .note a { color: var(--accent); }
+
+  /* News */
+  .filters { display: flex; gap: 8px; overflow-x: auto; touch-action: pan-x; margin: 0 -18px 14px; padding: 0 18px; scrollbar-width: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none; padding: 8px 14px; border-radius: 999px; font-size: 14px;
+    background: var(--panel); border: 1px solid var(--panel-border); color: var(--text);
+    touch-action: manipulation; -webkit-user-select: none; user-select: none; cursor: pointer;
+    transition: transform 140ms var(--ease-out), background 140ms var(--ease-out), color 140ms var(--ease-out);
+  }
+  .chip:active { transform: scale(0.96); }
+  .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+
+  .news { display: grid; gap: 12px; }
+  .item {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--panel); border: 1px solid var(--panel-border); border-radius: var(--radius); overflow: hidden;
+    -webkit-touch-callout: none; touch-action: manipulation;
+    transition: transform 140ms var(--ease-out), background 140ms var(--ease-out);
+  }
+  .item:active { transform: scale(0.985); background: rgba(255,255,255,0.07); }
+  .item img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; background: #0d1222; }
+  .item .body { padding: 14px 16px 16px; }
+  .meta { display: flex; gap: 8px; align-items: center; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .tag { padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,0.08); color: var(--text); }
+  .new { padding: 2px 8px; border-radius: 999px; background: var(--accent); color: #1a1000; font-weight: 700; }
+  .item h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.3; overflow-wrap: anywhere; }
+  .item p { margin: 0; font-size: 14px; color: #c3c9de; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+
+  .skeleton { height: 220px; border-radius: var(--radius); background: linear-gradient(90deg, var(--panel) 0%, rgba(255,255,255,0.08) 50%, var(--panel) 100%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+
+  /* Tab-Leiste */
+  nav.tabs {
+    position: fixed; left: 50%; transform: translateX(-50%);
+    bottom: calc(var(--bottom) + 12px);
+    display: flex; gap: 4px; padding: 5px; border-radius: 999px;
+    background: rgba(20, 24, 40, 0.72); border: 1px solid var(--panel-border);
+    -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  }
+  .tab {
+    position: relative; display: flex; align-items: center; gap: 8px;
+    padding: 11px 20px; border-radius: 999px; border: 0; background: transparent;
+    color: var(--muted); font: 600 15px/1 inherit; font-family: inherit;
+    touch-action: manipulation; -webkit-user-select: none; user-select: none; cursor: pointer;
+    transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 140ms var(--ease-out);
+  }
+  .tab:active { transform: scale(0.95); }
+  .tab[aria-selected="true"] { background: rgba(255,255,255,0.12); color: var(--text); }
+  .tab svg { width: 18px; height: 18px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--state); box-shadow: 0 0 8px var(--state); }
+  .badge { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--accent); color: #1a1000; font-size: 11px; font-weight: 800; display: grid; place-items: center; }
+  .badge[hidden] { display: none; }
+
+  .toast {
+    position: fixed; left: 50%; top: calc(var(--top) + 12px); transform: translate(-50%, -140%);
+    padding: 10px 16px; border-radius: 999px; font-size: 14px;
+    background: rgba(20,24,40,0.9); border: 1px solid var(--panel-border);
+    -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    transition: transform 260ms var(--ease-out);
+  }
+  .toast.show { transform: translate(-50%, 0); }
+
+  @media (hover: hover) and (pointer: fine) {
+    .item:hover, .icon-btn:hover, .chip:hover { background: rgba(255,255,255,0.08); }
+    .chip[aria-pressed="true"]:hover { background: var(--text); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: 1ms !important; }
+  }
+</style>
+</head>
+<body data-state="unknown">
+<div class="app">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#ff8a3d"/></linearGradient></defs><path d="M16 2 L26 28 L16 21 L6 28 Z" fill="url(#g)"/></svg>
+      <div>
+        <div class="eyebrow">Star Trek Online</div>
+        <h1 id="title">Serverstatus</h1>
+      </div>
+    </div>
+    <button class="icon-btn" id="refresh" aria-label="Aktualisieren">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="view active" id="view-status" aria-labelledby="tab-status">
+      <div class="hero">
+        <div class="orb" aria-hidden="true"><div class="ring"></div><div class="ring"></div><div class="core"></div></div>
+        <p class="state-label" id="state-label">Wird geprüft …</p>
+        <p class="state-sub" id="state-sub">&nbsp;</p>
+        <p class="state-msg" id="state-msg"></p>
+      </div>
+      <div class="facts">
+        <div class="fact"><b id="f-checked">–</b><span>zuletzt geprüft</span></div>
+        <div class="fact"><b id="f-uptime">–</b><span>verfügbar (24 Stunden)</span></div>
+        <div class="fact"><b id="f-latency">–</b><span>Antwortzeit in Millisekunden</span></div>
+      </div>
+      <div class="card">
+        <h2>Verlauf der letzten 24 Stunden</h2>
+        <div class="bars" id="bars"></div>
+        <div class="bars-legend"><span>vor 24 Stunden</span><span>jetzt</span></div>
+      </div>
+      <p class="note">Geprüft wird der offizielle Status-Endpunkt des Star-Trek-Online-Launchers, etwa alle 5 Minuten. Die App lädt jede Minute neu. Offizielle Infos: <a href="https://x.com/trekonlinegame" target="_blank" rel="noopener">@trekonlinegame</a></p>
+    </section>
+
+    <section class="view" id="view-news" aria-labelledby="tab-news">
+      <div class="filters" id="filters" role="group" aria-label="Filter"></div>
+      <div class="news" id="news"><div class="skeleton"></div><div class="skeleton"></div></div>
+      <p class="note" id="news-note"></p>
+    </section>
+  </main>
+</div>
+
+<nav class="tabs" role="tablist">
+  <button class="tab" role="tab" id="tab-status" aria-selected="true" data-view="status"><span class="dot"></span>Status</button>
+  <button class="tab" role="tab" id="tab-news" aria-selected="false" data-view="news">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9h10M7 13h10M7 17h6"/></svg>
+    News<span class="badge" id="badge" hidden></span>
+  </button>
+</nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const STATES = {
+    online: { label: "Online", sub: "Die Server laufen." },
+    maintenance: { label: "Wartung", sub: "Die Server sind gerade geschlossen." },
+    offline: { label: "Offline", sub: "Der Launcher-Server antwortet nicht." },
+    unknown: { label: "Unbekannt", sub: "Der Status ließ sich nicht eindeutig lesen." },
+  };
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  };
+
+  let status = null, news = null, filter = "Alle", lastState = store.get("lastState", null);
+
+  const rel = (iso) => {
+    if (!iso) return "–";
+    const s = Math.max(0, (Date.now() - new Date(iso)) / 1000);
+    if (s < 60) return "gerade eben";
+    if (s < 3600) { const m = Math.round(s / 60); return m === 1 ? "vor 1 Minute" : `vor ${m} Minuten`; }
+    if (s < 86400) { const h = Math.round(s / 3600); return h === 1 ? "vor 1 Stunde" : `vor ${h} Stunden`; }
+    const d = Math.round(s / 86400);
+    return d === 1 ? "vor 1 Tag" : `vor ${d} Tagen`;
+  };
+  const clock = (iso) => new Date(iso).toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+
+  async function getJson(path) {
+    const res = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(res.status);
+    return res.json();
+  }
+
+  function toast(text) {
+    const t = $("toast");
+    t.textContent = text;
+    t.classList.add("show");
+    clearTimeout(toast.timer);
+    toast.timer = setTimeout(() => t.classList.remove("show"), 2600);
+  }
+
+  function renderStatus() {
+    if (!status) return;
+    const stale = Date.now() - new Date(status.checkedAt) > 30 * 60 * 1000;
+    const state = STATES[status.state] ? status.state : "unknown";
+    document.body.dataset.state = stale ? "unknown" : state;
+    $("state-label").textContent = stale ? "Keine aktuellen Daten" : STATES[state].label;
+    $("state-sub").textContent = stale
+      ? `Letzte Prüfung ${rel(status.checkedAt)}. Die automatische Prüfung läuft gerade nicht.`
+      : `${STATES[state].sub} Seit ${clock(status.since)} Uhr.`;
+    $("state-msg").textContent = status.message || "";
+    $("f-checked").textContent = rel(status.checkedAt);
+    $("f-latency").textContent = status.latencyMs ? String(status.latencyMs) : "–";
+    const h = status.history || [];
+    const on = h.filter((x) => x.s === "online").length;
+    $("f-uptime").textContent = h.length ? `${Math.round((on / h.length) * 100)} %` : "–";
+
+    // 48 Balken à 30 Minuten
+    const now = Date.now(), slots = 48, slotMs = 30 * 60 * 1000;
+    const cells = Array.from({ length: slots }, () => null);
+    for (const x of h) {
+      const i = slots - 1 - Math.floor((now - new Date(x.t)) / slotMs);
+      if (i < 0 || i >= slots) continue;
+      const rank = { offline: 3, maintenance: 2, unknown: 1, online: 0 };
+      if (cells[i] === null || rank[x.s] > rank[cells[i]]) cells[i] = x.s;
+    }
+    $("bars").innerHTML = cells.map((c) => `<i class="${c || ""}" title="${c || "keine Daten"}"></i>`).join("");
+
+    if (!stale && lastState && lastState !== state) toast(`Server jetzt: ${STATES[state].label}`);
+    lastState = state;
+    store.set("lastState", state);
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+  function renderNews() {
+    if (!news) return;
+    const seenAt = store.get("newsSeenAt", 0);
+    const kinds = ["Alle", ...new Set(news.items.map((i) => i.kind))];
+    $("filters").innerHTML = kinds.map((k) => `<button class="chip" aria-pressed="${k === filter}" data-kind="${esc(k)}">${esc(k)}</button>`).join("");
+    const list = news.items.filter((i) => filter === "Alle" || i.kind === filter);
+    $("news").innerHTML = list.length ? list.map((i) => {
+      const isNew = i.firstSeen && new Date(i.firstSeen).getTime() > seenAt;
+      return `<a class="item" href="${esc(i.urlDe || i.url)}" target="_blank" rel="noopener">
+        ${i.image ? `<img src="${esc(i.image)}" alt="" loading="lazy" onerror="this.remove()">` : ""}
+        <div class="body">
+          <div class="meta">${isNew ? '<span class="new">NEU</span>' : ""}<span class="tag">${esc(i.kind)}</span>${i.firstSeen ? `<span>${rel(i.firstSeen)}</span>` : ""}</div>
+          <h3>${esc(i.title)}</h3>
+          <p>${esc(i.summary)}</p>
+        </div></a>`;
+    }).join("") : `<div class="empty">Keine News in dieser Kategorie.</div>`;
+    $("news-note").textContent = `Quelle: offizielle Arc-Games-News, Stand ${rel(news.updatedAt)}`;
+    updateBadge();
+  }
+
+  function updateBadge() {
+    if (!news) return;
+    const seenAt = store.get("newsSeenAt", 0);
+    const n = news.items.filter((i) => i.firstSeen && new Date(i.firstSeen).getTime() > seenAt).length;
+    const b = $("badge");
+    b.hidden = n === 0 || current === "news";
+    b.textContent = n > 9 ? "9+" : n;
+  }
+
+  let current = "status";
+  function show(view) {
+    if (view === current) return;
+    if (current === "news") store.set("newsSeenAt", Date.now()); // beim Verlassen als gelesen markieren
+    current = view;
+    document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", t.dataset.view === view));
+    document.querySelectorAll(".view").forEach((v) => v.classList.toggle("active", v.id === `view-${view}`));
+    $("title").textContent = view === "news" ? "News" : "Serverstatus";
+    window.scrollTo({ top: 0 });
+    updateBadge();
+    if (view === "news") renderNews();
+  }
+
+  async function load(manual) {
+    const btn = $("refresh");
+    if (manual) { btn.classList.remove("spinning"); void btn.offsetWidth; btn.classList.add("spinning"); }
+    const [s, n] = await Promise.allSettled([getJson("data/status.json"), getJson("data/news.json")]);
+    if (s.status === "fulfilled") { status = s.value; renderStatus(); }
+    if (n.status === "fulfilled") { news = n.value; if (current === "news") renderNews(); else updateBadge(); }
+    if (s.status === "rejected" && n.status === "rejected") {
+      if (!status) { $("state-label").textContent = "Keine Verbindung"; $("state-sub").textContent = "Prüfe deine Internetverbindung."; }
+      if (manual) toast("Keine Verbindung");
+    } else if (manual) toast("Aktualisiert");
+  }
+
+  document.querySelectorAll(".tab").forEach((t) => t.addEventListener("pointerdown", () => show(t.dataset.view)));
+  $("refresh").addEventListener("click", () => load(true));
+  $("filters").addEventListener("click", (e) => {
+    const c = e.target.closest(".chip");
+    if (c) { filter = c.dataset.kind; renderNews(); }
+  });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) load(false); });
+  setInterval(() => { if (!document.hidden) load(false); }, 60 * 1000);
+  setInterval(() => { renderStatus(); }, 30 * 1000); // relative Zeiten weiterzählen
+
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+  load(false);
+})();
+</script>
+</body>
+</html>
