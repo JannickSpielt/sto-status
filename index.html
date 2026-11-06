@@ -202,6 +202,9 @@
   }
   .toast.show { transform: translate(-50%, 0); }
 
+  .flyby { position: fixed; left: 0; top: 0; z-index: 50; transform-origin: 200px 30px; pointer-events: none; will-change: transform, opacity; }
+  .flyby svg { display: block; width: 260px; height: 60px; overflow: visible; }
+  @media (prefers-reduced-motion: reduce) { .flyby { display: none; } }
   @media (hover: hover) and (pointer: fine) {
     .item:hover, .icon-btn:hover, .chip:hover { background: rgba(255,255,255,0.08); }
     .chip[aria-pressed="true"]:hover { background: var(--text); }
@@ -266,6 +269,23 @@
     News<span class="badge" id="badge" hidden></span>
   </button>
 </nav>
+<div class="flyby" id="flyby" hidden aria-hidden="true">
+  <svg viewBox="-200 -30 260 60">
+    <defs>
+      <linearGradient id="trail" x1="0" x2="1"><stop offset="0" stop-color="#7fb2ff" stop-opacity="0"/><stop offset="1" stop-color="#bfe0ff" stop-opacity="0.9"/></linearGradient>
+      <linearGradient id="hull" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e8ecf6"/><stop offset="1" stop-color="#8a93a8"/></linearGradient>
+    </defs>
+    <path d="M-190 -9 L-36 -11 L-36 -7 Z" fill="url(#trail)"/>
+    <path d="M-190 9 L-36 11 L-36 7 Z" fill="url(#trail)"/>
+    <rect x="-40" y="-14" width="34" height="6" rx="3" fill="url(#hull)"/>
+    <rect x="-40" y="8" width="34" height="6" rx="3" fill="url(#hull)"/>
+    <rect x="-42" y="-13" width="6" height="4" rx="2" fill="#ffb347"/>
+    <rect x="-42" y="9" width="6" height="4" rx="2" fill="#ffb347"/>
+    <path d="M-22 -9 L-14 -3 M-22 9 L-14 3" stroke="#aab3c8" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M-28 0 C-24 -6 6 -7 26 -2 L34 0 L26 2 C6 7 -24 6 -28 0 Z" fill="url(#hull)"/>
+    <circle cx="18" cy="0" r="2" fill="#8fd3ff"/>
+  </svg>
+</div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -353,7 +373,8 @@
     const list = news.items.filter(match);
     $("news").innerHTML = list.length ? list.map((i) => {
       const isNew = i.firstSeen && new Date(i.firstSeen).getTime() > seenAt;
-      const title = i.de?.title || i.title, summary = i.de?.summary || i.summary;
+      const title = i.de?.title || i.title;
+      const summary = i.de ? (/^Spiele Star Trek Online, das Free-to-Play/i.test(i.de.summary || "") ? "" : i.de.summary) : i.summary;
       const tags = [...(i.platforms || []), ...(i.patch ? ["Patch-Notes"] : [])];
       return `<a class="item" href="${esc(i.urlDe || i.url)}" target="_blank" rel="noopener">
         ${i.image ? `<img src="${esc(i.image)}" alt="" loading="lazy" onerror="this.remove()">` : ""}
@@ -389,6 +410,25 @@
     if (view === "news") renderNews();
   }
 
+  // Raumschiff fliegt im Bogen von oben rechts quer über den Bildschirm
+  function flyby() {
+    const el = $("flyby");
+    if (!el.animate || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const w = innerWidth, h = innerHeight;
+    const p0 = [w + 60, h * 0.06], p1 = [w * 0.75, h * 0.5], p2 = [-220, h * 0.88];
+    const at = (t) => [0, 1].map((k) => (1 - t) ** 2 * p0[k] + 2 * (1 - t) * t * p1[k] + t * t * p2[k]);
+    const frames = [];
+    for (let i = 0; i <= 16; i++) {
+      const t = i / 16, [x, y] = at(t), [x2, y2] = at(Math.min(1, t + 0.01)), [x1, y1] = at(Math.max(0, t - 0.01));
+      const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+      const scale = 0.7 + 0.5 * Math.sin(Math.PI * t);
+      frames.push({ offset: t, transform: `translate(${x - 200}px, ${y - 30}px) rotate(${angle}deg) scale(${scale})`, opacity: t < 0.05 || t > 0.95 ? 0 : 1 });
+    }
+    el.hidden = false;
+    el.getAnimations().forEach((a) => a.cancel());
+    el.animate(frames, { duration: 1600, easing: "cubic-bezier(0.45, 0, 0.55, 1)" }).onfinish = () => { el.hidden = true; };
+  }
+
   async function load(manual) {
     const btn = $("refresh");
     if (manual) { btn.classList.remove("spinning"); void btn.offsetWidth; btn.classList.add("spinning"); }
@@ -402,7 +442,7 @@
   }
 
   document.querySelectorAll(".tab").forEach((t) => t.addEventListener("pointerdown", () => show(t.dataset.view)));
-  $("refresh").addEventListener("click", () => load(true));
+  $("refresh").addEventListener("click", () => { flyby(); load(true); });
   $("filters").addEventListener("click", (e) => {
     const c = e.target.closest(".chip");
     if (c) { filter = c.dataset.kind; renderNews(); }

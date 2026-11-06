@@ -121,6 +121,8 @@ function meta(html, names) {
   return "";
 }
 
+const GENERIC = /^Spiele Star Trek Online, das Free-to-Play/i;
+
 // Deutschen Titel und Kurztext von der deutschen Artikelseite holen
 async function fetchGerman(url) {
   try {
@@ -130,7 +132,8 @@ async function fetchGerman(url) {
     let title = meta(html, ["og:title", "twitter:title"]);
     if (!title) title = decode((html.match(/<title>([^<]*)<\/title>/i) || [])[1] || "");
     title = title.replace(/\s*[|–-]\s*Star Trek Online.*$/i, "").trim();
-    const summary = meta(html, ["og:description", "description", "twitter:description"]);
+    let summary = meta(html, ["og:description", "description", "twitter:description"]);
+    if (GENERIC.test(summary)) summary = ""; // allgemeiner Werbetext der Website, kein Artikeltext
     if (!title || /^star trek online$/i.test(title)) return null;
     return { title, summary };
   } catch {
@@ -141,7 +144,9 @@ async function fetchGerman(url) {
 async function updateNews() {
   const prev = await readJson("data/news.json", { items: [] });
   const firstSeen = Object.fromEntries((prev.items || []).map((i) => [i.id, i.firstSeen]));
-  const german = Object.fromEntries((prev.items || []).filter((i) => i.de).map((i) => [i.id, i.de]));
+  const german = Object.fromEntries((prev.items || []).filter((i) => i.de).map((i) => [
+    i.id, { ...i.de, summary: GENERIC.test(i.de.summary || "") ? "" : i.de.summary },
+  ]));
   const isFirstRun = !prev.items || prev.items.length === 0;
 
   const res = await fetchWithTimeout(NEWS_URL);

@@ -1,5 +1,5 @@
 // Speichert die App-Hülle für den Offline-Start. Daten kommen immer frisch aus dem Netz.
-const CACHE = "sto-status-v1";
+const CACHE = "sto-status-v2";
 const SHELL = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png", "icons/apple-touch-icon.png"];
 
 self.addEventListener("install", (e) => {
