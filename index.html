@@ -23,7 +23,7 @@
     --muted: #8b93ad;
     --accent: #ffb347;
     --online: #3ddc97;
-    --maint: #ffb347;
+    --degraded: #ffb347;
     --offline: #ff5c6c;
     --unknown: #8b93ad;
     --state: var(--unknown);
@@ -33,7 +33,7 @@
     --bottom: env(safe-area-inset-bottom, 0px);
   }
   [data-state="online"] { --state: var(--online); }
-  [data-state="maintenance"] { --state: var(--maint); }
+  [data-state="degraded"] { --state: var(--degraded); }
   [data-state="offline"] { --state: var(--offline); }
 
   * { box-sizing: border-box; }
@@ -124,10 +124,17 @@
   .bars { display: flex; gap: 2px; height: 34px; align-items: stretch; }
   .bars i { flex: 1; border-radius: 3px; background: var(--unknown); opacity: 0.35; }
   .bars i.online { background: var(--online); opacity: 1; }
-  .bars i.maintenance { background: var(--maint); opacity: 1; }
+  .bars i.degraded { background: var(--degraded); opacity: 1; }
   .bars i.offline { background: var(--offline); opacity: 1; }
   .bars-legend { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 8px; }
 
+  .services { list-style: none; margin: 0; padding: 0; }
+  .services li { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid var(--panel-border); font-size: 15px; }
+  .services li:first-child { border-top: 0; padding-top: 0; }
+  .services .sdot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--offline); }
+  .services .ok .sdot { background: var(--online); }
+  .services .name { flex: 1; }
+  .services .val { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .note { font-size: 13px; color: var(--muted); margin: 14px 4px 0; }
   .note a { color: var(--accent); }
 
@@ -233,11 +240,15 @@
         <div class="fact"><b id="f-latency">–</b><span>Antwortzeit in Millisekunden</span></div>
       </div>
       <div class="card">
+        <h2>Dienste</h2>
+        <ul class="services" id="services"></ul>
+      </div>
+      <div class="card">
         <h2>Verlauf der letzten 24 Stunden</h2>
         <div class="bars" id="bars"></div>
         <div class="bars-legend"><span>vor 24 Stunden</span><span>jetzt</span></div>
       </div>
-      <p class="note">Geprüft wird der offizielle Status-Endpunkt des Star-Trek-Online-Launchers, etwa alle 5 Minuten. Die App lädt jede Minute neu. Offizielle Infos: <a href="https://x.com/trekonlinegame" target="_blank" rel="noopener">@trekonlinegame</a></p>
+      <p class="note">Alle 5 Minuten wird geprüft, ob die Server von Star Trek Online Verbindungen annehmen. Eine angekündigte Wartung erkennt die App erst, wenn die Server wirklich zu sind. Die App lädt jede Minute neu. Offizielle Infos: <a href="https://x.com/trekonlinegame" target="_blank" rel="noopener">@trekonlinegame</a></p>
     </section>
 
     <section class="view" id="view-news" aria-labelledby="tab-news">
@@ -262,8 +273,8 @@
   const $ = (id) => document.getElementById(id);
   const STATES = {
     online: { label: "Online", sub: "Die Server laufen." },
-    maintenance: { label: "Wartung", sub: "Die Server sind gerade geschlossen." },
-    offline: { label: "Offline", sub: "Der Launcher-Server antwortet nicht." },
+    degraded: { label: "Eingeschränkt", sub: "Einzelne Dienste antworten nicht – vielleicht Wartung." },
+    offline: { label: "Offline", sub: "Die Server antworten nicht – vermutlich Wartung oder Ausfall." },
     unknown: { label: "Unbekannt", sub: "Der Status ließ sich nicht eindeutig lesen." },
   };
   const store = {
@@ -320,9 +331,10 @@
     for (const x of h) {
       const i = slots - 1 - Math.floor((now - new Date(x.t)) / slotMs);
       if (i < 0 || i >= slots) continue;
-      const rank = { offline: 3, maintenance: 2, unknown: 1, online: 0 };
+      const rank = { offline: 3, degraded: 2, unknown: 1, online: 0 };
       if (cells[i] === null || rank[x.s] > rank[cells[i]]) cells[i] = x.s;
     }
+    $("services").innerHTML = (status.services || []).map((x) => `<li class="${x.ok ? "ok" : ""}"><span class="sdot"></span><span class="name">${esc(x.name)}</span><span class="val">${x.ok ? `erreichbar · ${x.ms} Millisekunden` : "keine Antwort"}</span></li>`).join("");
     $("bars").innerHTML = cells.map((c) => `<i class="${c || ""}" title="${c || "keine Daten"}"></i>`).join("");
 
     if (!stale && lastState && lastState !== state) toast(`Server jetzt: ${STATES[state].label}`);
