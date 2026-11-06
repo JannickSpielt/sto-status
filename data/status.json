@@ -1,1 +1,15 @@
-{"state":"unknown","value":"noch nicht geprüft","message":"","checkedAt":"2026-11-06T16:00:00.000Z","since":"2026-11-06T16:00:00.000Z","history":[]}
+{
+ "state": "offline",
+ "value": "HTTP 404",
+ "message": "",
+ "raw": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /launcher_server_status was not found on this server.</p>\n</body></html>\n",
+ "latencyMs": 238,
+ "checkedAt": "2026-11-06T16:35:59.632Z",
+ "since": "2026-11-06T16:35:59.632Z",
+ "history": [
+  {
+   "t": "2026-11-06T16:35:59.632Z",
+   "s": "offline"
+  }
+ ]
+}
