@@ -96,16 +96,52 @@ async function updateStatus() {
   console.log("Status:", state, services.map((s) => `${s.id}=${s.ok}`).join(" "));
 }
 
-function kindOf(tags) {
-  if (tags.includes("sto-patch-notes") || tags.includes("patch-notes")) return "Patch-Notes";
-  if (tags.includes("sto-dev-blog") || tags.includes("dev-blog")) return "Dev-Blog";
-  if (tags.some((t) => /xbox|playstation/.test(t)) && !tags.includes("sto-launcher")) return "Konsole";
-  return "News";
+// Plattformen aus den Schlagwörtern: PC (Launcher) und/oder Konsole
+function platformsOf(tags) {
+  const konsole = tags.some((t) => /xbox|playstation/.test(t));
+  const pc = tags.includes("sto-launcher") || tags.includes("sto-patch-notes") ? true : !konsole;
+  return [...(pc ? ["PC"] : []), ...(konsole ? ["Konsole"] : [])];
+}
+
+function decode(str) {
+  return str
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&quot;/g, '"').replace(/&apos;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").trim();
+}
+
+function meta(html, names) {
+  for (const n of names) {
+    const re1 = new RegExp(`<meta[^>]+(?:property|name)=["']${n}["'][^>]*content=["']([^"']*)["']`, "i");
+    const re2 = new RegExp(`<meta[^>]+content=["']([^"']*)["'][^>]*(?:property|name)=["']${n}["']`, "i");
+    const m = html.match(re1) || html.match(re2);
+    if (m && m[1].trim()) return decode(m[1]);
+  }
+  return "";
+}
+
+// Deutschen Titel und Kurztext von der deutschen Artikelseite holen
+async function fetchGerman(url) {
+  try {
+    const res = await fetchWithTimeout(url, 12000);
+    if (!res.ok) return null;
+    const html = await res.text();
+    let title = meta(html, ["og:title", "twitter:title"]);
+    if (!title) title = decode((html.match(/<title>([^<]*)<\/title>/i) || [])[1] || "");
+    title = title.replace(/\s*[|–-]\s*Star Trek Online.*$/i, "").trim();
+    const summary = meta(html, ["og:description", "description", "twitter:description"]);
+    if (!title || /^star trek online$/i.test(title)) return null;
+    return { title, summary };
+  } catch {
+    return null;
+  }
 }
 
 async function updateNews() {
   const prev = await readJson("data/news.json", { items: [] });
   const firstSeen = Object.fromEntries((prev.items || []).map((i) => [i.id, i.firstSeen]));
+  const german = Object.fromEntries((prev.items || []).filter((i) => i.de).map((i) => [i.id, i.de]));
   const isFirstRun = !prev.items || prev.items.length === 0;
 
   const res = await fetchWithTimeout(NEWS_URL);
@@ -115,20 +151,28 @@ async function updateNews() {
 
   const items = list.map((n) => {
     const tags = n.tags || [];
-    const de = (n.translations || []).find((t) => t.language === "de");
+    const deEntry = (n.translations || []).find((t) => t.language === "de");
     const id = String(n.id);
     return {
       id,
       title: n.title,
       summary: n.summary || "",
       image: n.images?.img_microsite_thumbnail?.url || "",
-      kind: kindOf(tags),
+      platforms: platformsOf(tags),
+      patch: tags.includes("sto-patch-notes") || tags.includes("patch-notes"),
       url: `https://www.playstartrekonline.com/en/news/article/${id}`,
-      urlDe: de ? `https://www.playstartrekonline.com/de/news/article/${de.id}` : "",
+      urlDe: deEntry ? `https://www.playstartrekonline.com/de/news/article/${deEntry.id}` : "",
+      de: german[id] || null,
       // Die API liefert kein Datum: wir merken uns, wann wir den Artikel zuerst gesehen haben.
       firstSeen: id in firstSeen ? firstSeen[id] : isFirstRun ? null : now,
     };
   });
+
+  // Fehlende deutsche Texte nachladen (höchstens 15 pro Lauf, je 5 gleichzeitig)
+  const todo = items.filter((i) => !i.de && i.urlDe).slice(0, 15);
+  for (let k = 0; k < todo.length; k += 5) {
+    await Promise.all(todo.slice(k, k + 5).map(async (i) => { i.de = await fetchGerman(i.urlDe); }));
+  }
 
   await writeFile("data/news.json", JSON.stringify({ updatedAt: now, items }, null, 1));
   console.log("News:", items.length);
