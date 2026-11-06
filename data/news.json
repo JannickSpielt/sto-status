@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T17:07:15.073Z",
+ "updatedAt": "2026-11-06T21:44:50.038Z",
  "items": [
   {
    "id": "11583800",
@@ -56,7 +56,7 @@
    "id": "11583764",
    "title": "Rediscovered Giveaways!",
    "summary": "New giveaways are coming every day in the leadup to Rediscovered launching on Console!",
-   "image": "https://pwimages-a.akamaihd.net/arc/ba/67/ba678b0f6cb3765d8a287ef01851112f1793660257.png",
+   "image": "https://pwimages-a.akamaihd.net/arc/8b/4c/8b4c39d97a6cbab2d5fc203fd5a9b5fa1793660386.png",
    "platforms": [
     "Konsole"
    ],
@@ -530,7 +530,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583299",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583302",
-   "de": null,
+   "de": {
+    "title": "Doppel-XP-Ereignis",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -544,7 +547,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583242",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583245",
-   "de": null,
+   "de": {
+    "title": "Mudds auserkorenes Angebot und mehr",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -559,7 +565,10 @@
    "patch": true,
    "url": "https://www.playstartrekonline.com/en/news/article/11583251",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583254",
-   "de": null,
+   "de": {
+    "title": "Patch Notes 29.09.2026",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -574,7 +583,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583236",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583239",
-   "de": null,
+   "de": {
+    "title": "Kommandiert die Pilotenfregatte der Erigah-Klasse",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -588,7 +600,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583233",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583230",
-   "de": null,
+   "de": {
+    "title": "Pakete im Angebot",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -602,7 +617,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583227",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583224",
-   "de": null,
+   "de": {
+    "title": "Die Zeitlinie braucht eure Hilfe!",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -616,7 +634,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583215",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583218",
-   "de": null,
+   "de": {
+    "title": "Das Herold-Bundle",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -630,7 +651,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583203",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583206",
-   "de": null,
+   "de": {
+    "title": "Ereignis „Dämonenjagd“",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -645,7 +669,10 @@
    "patch": false,
    "url": "https://www.playstartrekonline.com/en/news/article/11583134",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583137",
-   "de": null,
+   "de": {
+    "title": "Bonusmarken-Ereignis",
+    "summary": ""
+   },
    "firstSeen": null
   },
   {
@@ -659,7 +686,10 @@
    "patch": true,
    "url": "https://www.playstartrekonline.com/en/news/article/11583209",
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583212",
-   "de": null,
+   "de": {
+    "title": "Patch Notes 24.09.2026",
+    "summary": ""
+   },
    "firstSeen": null
   }
  ]
