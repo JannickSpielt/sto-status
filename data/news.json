@@ -1,6 +1,40 @@
 {
- "updatedAt": "2026-11-07T14:10:18.230Z",
+ "updatedAt": "2026-11-07T18:47:31.352Z",
  "items": [
+  {
+   "id": "11583788",
+   "title": "Save 25% on Keys!",
+   "summary": "Save 25% on Keys and the Keyring Bundle over the next 48 hours on PC!",
+   "image": "https://pwimages-a.akamaihd.net/arc/5f/52/5f522966145f01e82ff6652755c7d0711793707165.jpg",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583788",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583785",
+   "de": {
+    "title": "Blitzverkauf - 25% auf Hauptschlüssel",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-07T18:47:31.352Z"
+  },
+  {
+   "id": "11583842",
+   "title": "The Swarm Bundle!",
+   "summary": "Mit dem Schwarm-Bundle könnt ihr euch auf dem PC für kurze Zeit die Inhalte der Schwarm-Verschlusskiste erneut sichern.",
+   "image": "https://pwimages-a.akamaihd.net/arc/42/30/423095cc9a0471de0da91f0bded2b0841793959993.png",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583842",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583845",
+   "de": {
+    "title": "Das Schwarm-Bundle",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-07T18:47:31.352Z"
+  },
   {
    "id": "11583800",
    "title": "The Dominion War Starship Bundle!",
@@ -56,7 +90,7 @@
    "id": "11583764",
    "title": "Rediscovered Giveaways!",
    "summary": "New giveaways are coming every day in the leadup to Rediscovered launching on Console!",
-   "image": "https://pwimages-a.akamaihd.net/arc/8b/4c/8b4c39d97a6cbab2d5fc203fd5a9b5fa1793660386.png",
+   "image": "https://pwimages-a.akamaihd.net/arc/c6/31/c63121ff6706dd7a5c00bfcb2b9017a71793660463.png",
    "platforms": [
     "Konsole"
    ],
@@ -653,41 +687,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583206",
    "de": {
     "title": "Ereignis „Dämonenjagd“",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583134",
-   "title": "Bonus Marks Event",
-   "summary": "Captains on all platforms can earn bonus Marks for a limited time!",
-   "image": "https://pwimages-a.akamaihd.net/arc/bd/e9/bde9323be932567b20bf5f35bb1ff4ee1789996823.jpg",
-   "platforms": [
-    "PC",
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583134",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583137",
-   "de": {
-    "title": "Bonusmarken-Ereignis",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583209",
-   "title": "PC Patch Notes for 9/24/26",
-   "summary": "Check out all the exciting changes coming to Star Trek Online on PC in our latest patch notes!",
-   "image": "https://pwimages-a.akamaihd.net/arc/a4/55/a455dd42e45d37e93a383c8d889252aa1790250427.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": true,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583209",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583212",
-   "de": {
-    "title": "Patch Notes 24.09.2026",
     "summary": ""
    },
    "firstSeen": null
