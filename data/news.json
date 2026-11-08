@@ -1,6 +1,23 @@
 {
- "updatedAt": "2026-11-08T07:57:37.637Z",
+ "updatedAt": "2026-11-08T14:52:14.322Z",
  "items": [
+  {
+   "id": "11583794",
+   "title": "Gift Select Bundles to Friends!",
+   "summary": "Very soon, on Xbox and Playstation, you'll be able to purchase select bundles as gifts for friends!",
+   "image": "https://pwimages-a.akamaihd.net/arc/2f/a1/2fa12fce346dc53a6187594952e89cde1793707759.png",
+   "platforms": [
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583794",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583791",
+   "de": {
+    "title": "Beschenkt eure Freunde!",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-08T14:52:14.322Z"
+  },
   {
    "id": "11583788",
    "title": "Save 25% on Keys!",
@@ -670,23 +687,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583218",
    "de": {
     "title": "Das Herold-Bundle",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583203",
-   "title": "Send the Demons Back!",
-   "summary": "The Demon Hunting Event returns on Xbox and Playstation as the fourth in our 2026 Event Campaign!",
-   "image": "https://pwimages-a.akamaihd.net/arc/59/a7/59a75f25a3b6742e7677057a977591a81790211080.png",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583203",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583206",
-   "de": {
-    "title": "Ereignis „Dämonenjagd“",
     "summary": ""
    },
    "firstSeen": null
