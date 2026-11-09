@@ -1,6 +1,40 @@
 {
- "updatedAt": "2026-11-09T09:57:45.577Z",
+ "updatedAt": "2026-11-09T20:31:49.824Z",
  "items": [
+  {
+   "id": "11583857",
+   "title": "The Feast!",
+   "summary": "The Feast is coming, and you can get a device that works on both Space and Ground!",
+   "image": "https://pwimages-a.akamaihd.net/arc/1a/98/1a985d0184c2475fdace33dda0d6d2a51794198105.png",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583857",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583854",
+   "de": {
+    "title": "Fressen oder gefressen werden!",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-09T20:31:49.824Z"
+  },
+  {
+   "id": "11583866",
+   "title": "A New Way to Obtain Ships!",
+   "summary": "The 60th Anniversary Starship Icons Prize Pack gives you a chance at 61 starships, including the Enterprise from SNW!",
+   "image": "https://pwimages-a.akamaihd.net/arc/d5/b6/d5b646f4b390cfdafc19ff3a1a757efb1794198988.png",
+   "platforms": [
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583866",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583869",
+   "de": {
+    "title": "Eine neue Art, Schiffe zu erhalten",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-09T20:31:49.824Z"
+  },
   {
    "id": "11583794",
    "title": "Gift Select Bundles to Friends!",
@@ -107,7 +141,7 @@
    "id": "11583764",
    "title": "Rediscovered Giveaways!",
    "summary": "New giveaways are coming every day in the leadup to Rediscovered launching on Console!",
-   "image": "https://pwimages-a.akamaihd.net/arc/18/f9/18f935d5620d6085b89b9279421810331793660531.png",
+   "image": "https://pwimages-a.akamaihd.net/arc/22/ff/22ffc2ee34b15e1c1fb1081231474b051794247663.png",
    "platforms": [
     "Konsole"
    ],
@@ -653,40 +687,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583230",
    "de": {
     "title": "Pakete im Angebot",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583227",
-   "title": "The Timeline Needs You!",
-   "summary": "Starting September 29th on Xbox and Playstation, you'll be able to create a Temporal Recruit and unlock rewards for your whole account!",
-   "image": "https://pwimages-a.akamaihd.net/arc/85/bf/85bf582d2f46c900cd0d7e2292c34d111790326486.jpg",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583227",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583224",
-   "de": {
-    "title": "Die Zeitlinie braucht eure Hilfe!",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583215",
-   "title": "The Herald Mini Bundle!",
-   "summary": "The Herald Bundle is coming to Star Trek Online on Console next week, allowing you to get almost the entire Herald Lockbox in one go!",
-   "image": "https://pwimages-a.akamaihd.net/arc/b5/a6/b5a6f2e8ef2159751b4382eceabe92901790298636.png",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583215",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583218",
-   "de": {
-    "title": "Das Herold-Bundle",
     "summary": ""
    },
    "firstSeen": null
