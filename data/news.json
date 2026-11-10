@@ -1,6 +1,58 @@
 {
- "updatedAt": "2026-11-10T10:38:24.151Z",
+ "updatedAt": "2026-11-10T18:15:08.630Z",
  "items": [
+  {
+   "id": "11583851",
+   "title": "Welcome to Rediscovered!",
+   "summary": "Rediscovered has come to Xbox and Playstation! Here's all the details, and a special message from Executive Producer Thomas Marrone.",
+   "image": "https://pwimages-a.akamaihd.net/arc/31/0b/310b1fc1be5a66bf4d42e17521c56a491793971536.png",
+   "platforms": [
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583851",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583848",
+   "de": {
+    "title": "Willkommen zu Rediscovered!",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-10T18:15:08.630Z"
+  },
+  {
+   "id": "11583905",
+   "title": "The Rediscovered Mini Bundle!",
+   "summary": "Later today, Captains on Xbox and Playstation can purchase a new Mini-Bundle with two Holographic Spock Bridge Officers, new weapons, outfits, and more!",
+   "image": "https://pwimages-a.akamaihd.net/arc/3f/45/3f45e6041af8613299437a634a0f1b551794270883.png",
+   "platforms": [
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583905",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583908",
+   "de": {
+    "title": "Das Minipaket „Rediscovered“",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-10T18:15:08.630Z"
+  },
+  {
+   "id": "11583911",
+   "title": "Patch Notes for 11/10/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/cf/60/cf6061168a30e27d3e22c8793122351a1794303949.jpg",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": true,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583911",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583914",
+   "de": {
+    "title": "Patch Notes 10.11.2026",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-10T18:15:08.630Z"
+  },
   {
    "id": "11583857",
    "title": "The Feast!",
@@ -141,7 +193,7 @@
    "id": "11583764",
    "title": "Rediscovered Giveaways!",
    "summary": "New giveaways are coming every day in the leadup to Rediscovered launching on Console!",
-   "image": "https://pwimages-a.akamaihd.net/arc/22/ff/22ffc2ee34b15e1c1fb1081231474b051794247663.png",
+   "image": "https://pwimages-a.akamaihd.net/arc/be/b4/beb4d3460a4d77175183dfa523360d7b1793660672.png",
    "platforms": [
     "Konsole"
    ],
@@ -634,59 +686,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583245",
    "de": {
     "title": "Mudds auserkorenes Angebot und mehr",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583251",
-   "title": "Patch Notes for 9/29/26",
-   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
-   "image": "https://pwimages-a.akamaihd.net/arc/24/26/2426a463e06ebc60ffdfb275411bb44d1790686321.jpg",
-   "platforms": [
-    "PC",
-    "Konsole"
-   ],
-   "patch": true,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583251",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583254",
-   "de": {
-    "title": "Patch Notes 29.09.2026",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583236",
-   "title": "Command the Breen Erigah Frigate!",
-   "summary": "Straight from Star Trek: Discovery, the Erigah Pilot Frigate is coming to the Infinity Lock Box on Xbox and Playstation!",
-   "image": "https://pwimages-a.akamaihd.net/arc/44/57/44577e5de336506f030abbb04df044571790376174.png",
-   "platforms": [
-    "PC",
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583236",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583239",
-   "de": {
-    "title": "Kommandiert die Pilotenfregatte der Erigah-Klasse",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583233",
-   "title": "Save on Bundles!",
-   "summary": "Captains on PC can save on Bundles for a limited time!",
-   "image": "https://pwimages-a.akamaihd.net/arc/6a/13/6a135515fca42b18e62de3dc046fd7cf1790327536.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583233",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583230",
-   "de": {
-    "title": "Pakete im Angebot",
     "summary": ""
    },
    "firstSeen": null
