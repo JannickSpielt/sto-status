@@ -1,6 +1,24 @@
 {
- "updatedAt": "2026-11-12T07:37:21.241Z",
+ "updatedAt": "2026-11-12T16:13:44.585Z",
  "items": [
+  {
+   "id": "11583974",
+   "title": "Hearts, Minds, and Unethical Research!",
+   "summary": "The spine tingling mission, Hearts and Minds, returns to all platforms for a limited time in honor of Friday the 13th!",
+   "image": "https://pwimages-a.akamaihd.net/arc/2e/6e/2e6e4685799e69a9471ad8979f83cac01794437303.png",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11583974",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583971",
+   "de": {
+    "title": "Herz und Seele kehrt zurück",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-12T16:13:44.585Z"
+  },
   {
    "id": "11583851",
    "title": "Welcome to Rediscovered!",
@@ -669,23 +687,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583302",
    "de": {
     "title": "Doppel-XP-Ereignis",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583242",
-   "title": "Mudd's Chosen Sale, and Key & Lobi Sale!",
-   "summary": "On Xbox and PlayStation, save on Keys, the Keyring Bundle, Lobi items, and whatever the Iconians are making Mudd sell!",
-   "image": "https://pwimages-a.akamaihd.net/arc/7d/05/7d05ce1f1c7a9a8ed63557cefe34af651790631937.png",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583242",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583245",
-   "de": {
-    "title": "Mudds auserkorenes Angebot und mehr",
     "summary": ""
    },
    "firstSeen": null
