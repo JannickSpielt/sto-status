@@ -1,6 +1,23 @@
 {
- "updatedAt": "2026-11-14T15:59:43.691Z",
+ "updatedAt": "2026-11-14T20:35:27.985Z",
  "items": [
+  {
+   "id": "11584013",
+   "title": "Four Bundles Return!",
+   "summary": "The Return to Duty Pack, the Undiscovered Mini-Bundle, the Herald Bundle, and the Frontier Day Mini Bundle are back on Xbox and Playstation for a limited time!",
+   "image": "https://pwimages-a.akamaihd.net/arc/77/82/7782f400ffe046ed4efbd69e49e3e5dc1794480234.png",
+   "platforms": [
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584013",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584010",
+   "de": {
+    "title": "Mini-Pakete kehren zurück",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-14T20:35:27.985Z"
+  },
   {
    "id": "11583974",
    "title": "Hearts, Minds, and Unethical Research!",
@@ -670,23 +687,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583317",
    "de": {
     "title": "Blitzverkauf - 25% auf Hauptschlüssel",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583299",
-   "title": "Double XP Event",
-   "summary": "Captains on PC can enjoy double experience this weekend!",
-   "image": "https://pwimages-a.akamaihd.net/arc/8c/cc/8ccc859fb1ad1a147e761ff76b3aafa31714382644.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583299",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583302",
-   "de": {
-    "title": "Doppel-XP-Ereignis",
     "summary": ""
    },
    "firstSeen": null
