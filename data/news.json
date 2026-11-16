@@ -1,6 +1,24 @@
 {
- "updatedAt": "2026-11-16T11:01:49.039Z",
+ "updatedAt": "2026-11-16T20:55:57.962Z",
  "items": [
+  {
+   "id": "11584025",
+   "title": "25% Zen Sale, Key & Lobi Sale!",
+   "summary": "Save on Keys, Lobi, and Zen Bundles this week!",
+   "image": "https://pwimages-a.akamaihd.net/arc/3c/4c/3c4cb46ce5bdaab77899aab9d900dea91794523261.png",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584025",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584028",
+   "de": {
+    "title": "25% Bonus-ZEN + Schlüssel- & Lobi-Angebot",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-16T20:55:57.962Z"
+  },
   {
    "id": "11584013",
    "title": "Four Bundles Return!",
@@ -670,23 +688,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583395",
    "de": {
     "title": "PC Patch Notes 08.10.2026",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583320",
-   "title": "Save 25% on Keys!",
-   "summary": "Save 25% on Keys and the Keyring Bundle over the next 48 hours on PC!",
-   "image": "https://pwimages-a.akamaihd.net/arc/6b/45/6b45e01fe848f27df21ff03bc72fd8d31790929528.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583320",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583317",
-   "de": {
-    "title": "Blitzverkauf - 25% auf Hauptschlüssel",
     "summary": ""
    },
    "firstSeen": null
