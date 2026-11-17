@@ -1,6 +1,24 @@
 {
- "updatedAt": "2026-11-17T03:25:25.319Z",
+ "updatedAt": "2026-11-17T12:16:39.451Z",
  "items": [
+  {
+   "id": "11584094",
+   "title": "Patch Notes for 11/17/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/4c/dd/4cdd1e5b11781e1a7bc5af31c0bc58c81794907072.jpg",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": true,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584094",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584097",
+   "de": {
+    "title": "Patch Notes 17.11.2026",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-17T12:16:39.451Z"
+  },
   {
    "id": "11584025",
    "title": "25% Zen Sale, Key & Lobi Sale!",
@@ -671,23 +689,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583308",
    "de": {
     "title": "Upgrade-Ereignis",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583392",
-   "title": "PC Patch Notes for 10/8/26",
-   "summary": "Check out all the exciting changes coming to Star Trek Online on PC in our latest patch notes!",
-   "image": "https://pwimages-a.akamaihd.net/arc/dd/5b/dd5be9621a388d8a195d6002dbca49181791452142.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": true,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583392",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583395",
-   "de": {
-    "title": "PC Patch Notes 08.10.2026",
     "summary": ""
    },
    "firstSeen": null
