@@ -1,6 +1,58 @@
 {
- "updatedAt": "2026-11-19T08:47:40.354Z",
+ "updatedAt": "2026-11-19T17:43:56.214Z",
  "items": [
+  {
+   "id": "11584142",
+   "title": "This Grand Sale is Theft!",
+   "summary": "Make a getaway – all of Mudd’s Market except Bundles are 80% off for 48 hours!",
+   "image": "https://pwimages-a.akamaihd.net/arc/af/48/af483c88dde102d47083d8d037fa59ea1795107976.png",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584142",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584145",
+   "de": {
+    "title": "Dieser Sale ist der reinste Raub!",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-19T17:43:56.214Z"
+  },
+  {
+   "id": "11584115",
+   "title": "Double XP Event!",
+   "summary": "Captains on Xbox and Playstation can enjoy double experience this weekend!",
+   "image": "https://pwimages-a.akamaihd.net/arc/3f/e7/3fe7612081f292ddd0f5885ddf0542c91795010945.jpg",
+   "platforms": [
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584115",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584112",
+   "de": {
+    "title": "Doppel-XP-Ereignis",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-19T17:43:56.214Z"
+  },
+  {
+   "id": "11584109",
+   "title": "Upgrade Event!",
+   "summary": "Captains on PC can get double the upgrade points for a limited time!",
+   "image": "https://pwimages-a.akamaihd.net/arc/b2/57/b257bcdc33746590b793cc27efeef6101795010624.jpg",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584109",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584106",
+   "de": {
+    "title": "Upgrade-Ereignis",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-19T17:43:56.214Z"
+  },
   {
    "id": "11584094",
    "title": "Patch Notes for 11/17/26",
@@ -638,57 +690,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583428",
    "de": {
     "title": "Neues Feature auf Tribble!",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583419",
-   "title": "Save on Bundles!",
-   "summary": "Save 35% on Ship Bundles in on Ship Bundles and Expansion Bundles on Xbox and Playstation!",
-   "image": "https://pwimages-a.akamaihd.net/arc/6a/13/6a135515fca42b18e62de3dc046fd7cf1790327536.jpg",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583419",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583422",
-   "de": {
-    "title": "Pakete im Angebot",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583344",
-   "title": "Four Bundles Return!",
-   "summary": "The Return to Duty Pack, the Undiscovered Mini-Bundle, the Herald Bundle, and the Frontier Day Mini Bundle are back on PC for a limited time!",
-   "image": "https://pwimages-a.akamaihd.net/arc/f2/09/f2092e41406f4a938485d6b236ec70d21791235751.png",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583344",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583347",
-   "de": {
-    "title": "Mini-Pakete kehren zurück",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583305",
-   "title": "Upgrade Event!",
-   "summary": "Captains on all platforms can get double the upgrade points for a limited time, starting tomorrow!",
-   "image": "https://pwimages-a.akamaihd.net/arc/33/f3/33f36a25fb0a05253f2e3ca21e2aae181715364729.jpg",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583305",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583308",
-   "de": {
-    "title": "Upgrade-Ereignis",
     "summary": ""
    },
    "firstSeen": null
