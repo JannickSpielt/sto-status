@@ -1,6 +1,24 @@
 {
- "updatedAt": "2026-11-20T13:57:24.879Z",
+ "updatedAt": "2026-11-20T21:42:39.923Z",
  "items": [
+  {
+   "id": "11584157",
+   "title": "Four New Ships for Lifetime Subscribers!",
+   "summary": "Lifetime Subscribers will have access to four new Command Destroyers next week, one for each faction!",
+   "image": "https://pwimages-a.akamaihd.net/arc/69/af/69afc5c35af78d069b95f35e109bc8571795132051.png",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584157",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584160",
+   "de": {
+    "title": "Vier neue Schiffe für euer Lebenslanges Abonnement",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-20T21:42:39.923Z"
+  },
   {
    "id": "11584142",
    "title": "This Grand Sale is Theft!",
@@ -673,23 +691,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583482",
    "de": {
     "title": "Kommandiert das Vidiianische Kriegsschiff",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583425",
-   "title": "A New Feature on Tribble!",
-   "summary": "A brand new feature for Deep Space Encounters is on Tribble starting today, and we want your feedback!",
-   "image": "https://pwimages-a.akamaihd.net/arc/a3/71/a37133f78984ca515391846f327334771791501250.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583425",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583428",
-   "de": {
-    "title": "Neues Feature auf Tribble!",
     "summary": ""
    },
    "firstSeen": null
