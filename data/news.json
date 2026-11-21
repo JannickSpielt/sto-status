@@ -1,6 +1,23 @@
 {
- "updatedAt": "2026-11-21T10:18:55.563Z",
+ "updatedAt": "2026-11-21T17:38:45.178Z",
  "items": [
+  {
+   "id": "11584163",
+   "title": "The Galaxy Goes to Red Alert!",
+   "summary": "Captains on PC can go to Red Alert for two weeks to earn an Ultimate Tech Upgrade!",
+   "image": "https://pwimages-a.akamaihd.net/arc/9e/b6/9eb620530c2cc30313a92a59072579d11789395249.jpg",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584163",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584166",
+   "de": {
+    "title": "Roter Alarm in der Galaxie",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-21T17:38:45.178Z"
+  },
   {
    "id": "11584157",
    "title": "Four New Ships for Lifetime Subscribers!",
@@ -673,24 +690,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583434",
    "de": {
     "title": "Doppel-XP-Ereignis",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583479",
-   "title": "Command the Vidiian Warship!",
-   "summary": "Command the Vidiian Science Warship, and steal life from your foes!",
-   "image": "https://pwimages-a.akamaihd.net/arc/84/f9/84f9ca415cbbf203b1af750b63d8828d1791935041.png",
-   "platforms": [
-    "PC",
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583479",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583482",
-   "de": {
-    "title": "Kommandiert das Vidiianische Kriegsschiff",
     "summary": ""
    },
    "firstSeen": null
