@@ -7,39 +7,39 @@
    "name": "Account-Server",
    "core": true,
    "ok": true,
-   "ms": 96
+   "ms": 101
   },
   {
    "id": "game",
    "name": "Spielserver (Controller)",
    "core": true,
    "ok": true,
-   "ms": 111
+   "ms": 92
   },
   {
    "id": "launcher",
    "name": "Launcher",
    "core": false,
    "ok": true,
-   "ms": 221
+   "ms": 151
   },
   {
    "id": "web",
    "name": "Offizielle Website",
    "core": false,
    "ok": true,
-   "ms": 881
+   "ms": 577
   },
   {
    "id": "error",
    "name": "Fehlerdienst",
    "core": false,
    "ok": true,
-   "ms": 255
+   "ms": 129
   }
  ],
- "latencyMs": 104,
- "checkedAt": "2026-11-22T17:46:18.635Z",
+ "latencyMs": 97,
+ "checkedAt": "2026-11-22T22:50:24.707Z",
  "since": "2026-11-06T16:39:23.475Z",
  "history": [
   {
@@ -300,6 +300,10 @@
   },
   {
    "t": "2026-11-22T17:46:18.635Z",
+   "s": "online"
+  },
+  {
+   "t": "2026-11-22T22:50:24.707Z",
    "s": "online"
   }
  ]
