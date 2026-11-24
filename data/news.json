@@ -1,6 +1,41 @@
 {
- "updatedAt": "2026-11-24T10:29:42.309Z",
+ "updatedAt": "2026-11-24T20:49:00.060Z",
  "items": [
+  {
+   "id": "11584169",
+   "title": "Behold! Black Friday!",
+   "summary": "The Guardian of Forever speaks to you about the sales of Black Friday!",
+   "image": "https://pwimages-a.akamaihd.net/arc/9d/d9/9dd9a1159885a67bb32fdc1eac6e4fde1795214939.png",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584169",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584172",
+   "de": {
+    "title": "Sehet, der Black Friday!",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-24T20:49:00.060Z"
+  },
+  {
+   "id": "11584202",
+   "title": "Patch Notes for 11/24/26",
+   "summary": "Check out all the exciting changes coming to Star Trek Online in our latest patch notes!",
+   "image": "https://pwimages-a.akamaihd.net/arc/c8/f1/c8f16e335cf4df4947fe991680147b2e1795528434.jpg",
+   "platforms": [
+    "PC",
+    "Konsole"
+   ],
+   "patch": true,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584202",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584205",
+   "de": {
+    "title": "Patch Notes 24.11.2026",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-24T20:49:00.060Z"
+  },
   {
    "id": "11584163",
    "title": "The Galaxy Goes to Red Alert!",
@@ -656,40 +691,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583524",
    "de": {
     "title": "The Galaxy Goes to Red Alert",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583494",
-   "title": "Halloween Giveaways!",
-   "summary": "We're doing Giveaways leading up to the Halloween Event on PC! (And after on Console)",
-   "image": "https://pwimages-a.akamaihd.net/arc/8d/99/8d99b5a1aeb07c269d61c3e9a4057bb41792013377.png",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583494",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583497",
-   "de": {
-    "title": "Halloween-Giveaways",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583431",
-   "title": "Double XP Event!",
-   "summary": "Captains on Xbox and Playstation can enjoy double experience this weekend!",
-   "image": "https://pwimages-a.akamaihd.net/arc/8c/cc/8ccc859fb1ad1a147e761ff76b3aafa31714382644.jpg",
-   "platforms": [
-    "Konsole"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583431",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583434",
-   "de": {
-    "title": "Doppel-XP-Ereignis",
     "summary": ""
    },
    "firstSeen": null
