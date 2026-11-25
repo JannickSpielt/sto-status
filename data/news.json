@@ -1,6 +1,23 @@
 {
- "updatedAt": "2026-11-25T13:38:38.943Z",
+ "updatedAt": "2026-11-25T22:45:04.361Z",
  "items": [
+  {
+   "id": "11584175",
+   "title": "New Items in Mudd's Market!",
+   "summary": "A Holoship, Mission Scouts, and the Kida's Boon set all come to Mudd's Market on PC next week!",
+   "image": "https://pwimages-a.akamaihd.net/arc/02/16/0216c96cef1984a7da20412a3ce9ac2e1795415112.png",
+   "platforms": [
+    "PC"
+   ],
+   "patch": false,
+   "url": "https://www.playstartrekonline.com/en/news/article/11584175",
+   "urlDe": "https://www.playstartrekonline.com/de/news/article/11584178",
+   "de": {
+    "title": "Neue Gegenstände in Mudds Markt",
+    "summary": ""
+   },
+   "firstSeen": "2026-11-25T22:45:04.361Z"
+  },
   {
    "id": "11584169",
    "title": "Behold! Black Friday!",
@@ -674,23 +691,6 @@
    "urlDe": "https://www.playstartrekonline.com/de/news/article/11583491",
    "de": {
     "title": "Wovor habt ihr Angst?",
-    "summary": ""
-   },
-   "firstSeen": null
-  },
-  {
-   "id": "11583521",
-   "title": "The Galaxy Goes to Red Alert",
-   "summary": "Captains on PC can go to Red Alert for one week to earn an Ultimate Tech Upgrade!",
-   "image": "https://pwimages-a.akamaihd.net/arc/9e/b6/9eb620530c2cc30313a92a59072579d11789395249.jpg",
-   "platforms": [
-    "PC"
-   ],
-   "patch": false,
-   "url": "https://www.playstartrekonline.com/en/news/article/11583521",
-   "urlDe": "https://www.playstartrekonline.com/de/news/article/11583524",
-   "de": {
-    "title": "The Galaxy Goes to Red Alert",
     "summary": ""
    },
    "firstSeen": null
